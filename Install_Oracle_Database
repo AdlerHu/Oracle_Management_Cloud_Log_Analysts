@@ -13,5 +13,16 @@ Install Oracle Database 19c
   mv oracle-database-ee-19c-1.0-1.x86_64.rpm /tmp
   sudo yum -y localinstall oracle-database-ee-19c-1.0-1.x86_64.rpm
   sudo /etc/init.d/oracledb_ORCLCDB-19c configure  
+  /etc/init.d/oracledb_ORCLCDB-19c configure
+  vi /home/oracle/.bash_profile
+      # User specific environment and startup programs
+      export ORACLE_BASE=/opt/oracle
+      export ORACLE_HOME=/opt/oracle/product/19c/dbhome_1
 
-  
+      PATH=$PATH:$HOME/.local/bin:$HOME/bin:$ORACLE_HOME/bin
+      export PATH
+  . oraenv
+    ORACLEDB
+    /opt/oracle/product/19c/dbhome_1
+    
+  sqlplus / as sysdba
