@@ -1,3 +1,5 @@
+On Oracle Linux 7.9
+
 Make user sudoer
   su root
   usermod -aG wheel username
