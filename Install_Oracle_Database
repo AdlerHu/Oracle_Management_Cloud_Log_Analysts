@@ -4,8 +4,12 @@ Make user sudoer
 
 Install Oracle Preinstallation RPM
   yum search preinstall
-  yum install oracle-database-preinstall-19c.x86_64
-  passwd oracle
+  sudo yum install oracle-database-preinstall-19c.x86_64
+  
+  if "Another app is currently holding the yum lock; waiting for it to exit"
+    rm -f /var/run/yum.pid
+  
+  sudo passwd oracle
 
 Install Oracle Database 19c
   Download Oracle Database 19c RPM (https://www.oracle.com/tw/database/technologies/oracle-database-software-downloads.html)
@@ -14,7 +18,7 @@ Install Oracle Database 19c
   sudo yum -y localinstall oracle-database-ee-19c-1.0-1.x86_64.rpm
   sudo /etc/init.d/oracledb_ORCLCDB-19c configure  
   /etc/init.d/oracledb_ORCLCDB-19c configure
-  vi /home/oracle/.bash_profile
+  sudo vi /home/oracle/.bash_profile
       # User specific environment and startup programs
       export ORACLE_BASE=/opt/oracle
       export ORACLE_HOME=/opt/oracle/product/19c/dbhome_1
@@ -25,4 +29,5 @@ Install Oracle Database 19c
     ORACLEDB
     /opt/oracle/product/19c/dbhome_1
     
+  su oracle
   sqlplus / as sysdba
