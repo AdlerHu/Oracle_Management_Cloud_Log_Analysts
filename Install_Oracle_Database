@@ -17,7 +17,6 @@ Install Oracle Database 19c
   cd /Home/user/Downloads
   mv oracle-database-ee-19c-1.0-1.x86_64.rpm /tmp
   yum -y localinstall oracle-database-ee-19c-1.0-1.x86_64.rpm
-  /etc/init.d/oracledb_ORCLCDB-19c configure  
   /etc/init.d/oracledb_ORCLCDB-19c configure
   
   su oracle
