@@ -1,20 +1,23 @@
 On Oracle Linux 7.9
 
-On Browser
-  Oracle Cloud Infrastructure Console -> Platform Services -> Management Cloud
-  Create Instance
+Install Cloud Agent
 
-Into Instance
-  Administration -> Agents -> Cloud Agents 
-  Create Registration Keys
-  Download Agents
-  
-mv /home/user/Downloads/cloudagent_linux.x64_1.52.0.zip ..
-unzip cloudagent_linux.x64_1.52.0.zip
-vi agent.rsp
-  TENANT_NAME
-  AGENT_REGISTRATION_KEY
-  OMC_URL
-  DISPLAY_NAME
-  
-sh AgentInstall.sh
+  On Browser
+    Oracle Cloud Infrastructure Console -> Platform Services -> Management Cloud
+    Create Instance
+
+  Into Instance
+    Administration -> Agents -> Cloud Agents 
+    Create Registration Keys
+    Download Agents
+
+  mv /home/user/Downloads/cloudagent_linux.x64_1.52.0.zip ..
+  unzip cloudagent_linux.x64_1.52.0.zip
+  vi agent.rsp
+    TENANT_NAME
+    AGENT_REGISTRATION_KEY
+    OMC_URL
+    DISPLAY_NAME
+
+  sh AgentInstall.sh
+
