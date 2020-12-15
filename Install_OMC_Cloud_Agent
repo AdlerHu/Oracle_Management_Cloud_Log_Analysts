@@ -18,6 +18,7 @@ Install Cloud Agent
     AGENT_REGISTRATION_KEY
     OMC_URL
     DISPLAY_NAME
+    ORACLE_HOSTNAME
 
   sh AgentInstall.sh
 
