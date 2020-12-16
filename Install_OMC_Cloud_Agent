@@ -6,19 +6,42 @@ Install Cloud Agent
     Oracle Cloud Infrastructure Console -> Platform Services -> Management Cloud
     Create Instance
 
-  Into Instance
-    Administration -> Agents -> Cloud Agents 
-    Create Registration Keys
-    Download Agents
+    Into Instance
+      Administration -> Agents -> Cloud Agents 
+      Create Registration Keys
+      Download Agents
 
-  mv /home/user/Downloads/cloudagent_linux.x64_1.52.0.zip ..
-  unzip cloudagent_linux.x64_1.52.0.zip
-  vi agent.rsp
-    TENANT_NAME
-    AGENT_REGISTRATION_KEY
-    OMC_URL
-    DISPLAY_NAME
-    ORACLE_HOSTNAME
+  On Linux Command Line  
+    mv /home/user/Downloads/cloudagent_linux.x64_1.52.0.zip ..
+    unzip cloudagent_linux.x64_1.52.0.zip
+    vi agent.rsp
+      TENANT_NAME
+      AGENT_REGISTRATION_KEY
+      OMC_URL
+      DISPLAY_NAME
+      ORACLE_HOSTNAME
 
-  sh AgentInstall.sh
+    sh AgentInstall.sh
 
+  On Browser
+    Enable cloud agent clooect log
+      Administration -> Agents -> Cloud Agents -> Actions -> View Details -> Log Collection (Enabled)
+    
+    Add Database entity
+      Administration -> Discovery -> Add Entity 
+        Entity Type: Oracle Database System
+        Configuration: Single Instance
+        Entity Name
+        Host Name
+        Connect Type: SID
+        Connect Value: ORCLCDB
+        Listener Alias
+        Listener Oracle Home: /opt/oracle/product/19c/dbhome_1 (echo $ORACLE_HOME)
+        Cloud Agent
+        Username: c##user_name
+        Password
+        Database Role
+        Associate Logs
+   
+    Monitoring
+      Monitoring -> Entities -> Performance Charts
