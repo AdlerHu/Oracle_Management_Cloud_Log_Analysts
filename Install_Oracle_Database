@@ -31,5 +31,19 @@ Install Oracle Database 19c
       export PATH
   . oraenv
     ORCLCDB
-    
+
+Check Listener state
+  lsnrctl status
+  
+  if no Listener
+    lsnrctl start
+
+get into Oracle Database
   sqlplus / as sysdba
+  
+  startup
+  create user c##user_name identified by password;
+  grant sysdba to c##user_name container=all;
+  grant create session to c##user_name;
+  
+  
