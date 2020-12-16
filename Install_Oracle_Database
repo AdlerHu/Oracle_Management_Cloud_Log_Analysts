@@ -38,12 +38,19 @@ Check Listener state
   if no Listener
     lsnrctl start
 
-get into Oracle Database
+Get into Oracle Database
   sqlplus / as sysdba
   
   startup
-  create user c##user_name identified by password;
-  grant sysdba to c##user_name container=all;
-  grant create session to c##user_name;
   
+  Create user and give it the access
+    create user c##user_name identified by password;
+    grant sysdba to c##user_name container=all;
+    grant create session to c##user_name;
+    
+Login Oracle Database by user
+  su oracle
+  . oraenv
+  ORCLCDB
+  sqlplus c##user_name as sysdba
   
