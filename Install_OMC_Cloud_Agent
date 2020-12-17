@@ -45,3 +45,14 @@ Install Cloud Agent
    
 Monitoring
   Monitoring -> Entities -> Performance Charts
+
+Check cloud agent status
+  sh /home/oracle/omcagent/agent_inst/bin/omcli status agent
+
+Start OMC cloud agent
+  /home/oracle/omcagent/agent_inst/bin/omcli start agent
+
+Automatic execution at boot
+  su root
+  chmod 744 /etc/rc.d/rc.local
+  vi /etc/rc.d/rc.local
