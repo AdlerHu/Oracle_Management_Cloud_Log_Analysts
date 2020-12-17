@@ -53,4 +53,4 @@ Login Oracle Database by user
   . oraenv
   ORCLCDB
   sqlplus c##user_name as sysdba
-  
+  startup
