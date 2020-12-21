@@ -1,5 +1,14 @@
 
-Download zip at https://www.oracle.com/tw/database/technologies/oracle-database-software-downloads.html
-unzip WINDOWS.X64_193000_db_home.zip
+Install Oracle Database
+  Download zip at https://www.oracle.com/tw/database/technologies/oracle-database-software-downloads.html
+  unzip WINDOWS.X64_193000_db_home.zip
 
-click setup
+  click setup
+  
+Create user
+  On cmd
+  sqlplus / as sysdba
+  
+  create user c##username identified by password;
+  grant sysdba to c##username container=all;
+  grant create session to c##username;
