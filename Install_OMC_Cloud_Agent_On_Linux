@@ -55,4 +55,10 @@ Start OMC cloud agent
 Automatic execution at boot
   su root
   chmod 744 /etc/rc.d/rc.local
+  
   vi /etc/rc.d/rc.local
+    # Auto-start OMC Cloud Agent when reboot
+    su - 'oracle' -c '/home/oracle/OMC/Cloud_Agent/omcagent/agent_inst/bin/omcli start agent'
+
+    # Auto-start oracle database listener when reboot
+    su - 'oracle' -c 'lsnrctl start'
