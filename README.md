@@ -8,7 +8,7 @@ Workflow of Log Analyst with Oracle Management Cloud
   4. Install Cloud Agent on Host
       a. Create Registration Keys
       b. Download cloud agent
-      c. vi cloud agent installing parameter
+      c. setup cloud agent installing parameter
       d. Install cloud agent
       e. Set auto-start cloud agent when reboot
   5. Check Cloud Agent on OMC website
