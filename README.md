@@ -1,6 +1,7 @@
 Monitoring oracle database with oracle management cloud
 
 Workflow of Log Analyst with Oracle Management Cloud 
+  
   0. Create an Oracle Cloud Account or user that can get into oracle management cloud
   1. Get into oracle management cloud
   2. Create instance
