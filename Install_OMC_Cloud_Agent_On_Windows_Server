@@ -9,3 +9,12 @@ I. Install the Oracle Management Cloud Agent
 
 II. Add a database entity
   0. 
+
+
+
+
+
+
+
+Check Database Parameter
+  search -> regedit ->  Computer -> HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_OraDB19Home1
