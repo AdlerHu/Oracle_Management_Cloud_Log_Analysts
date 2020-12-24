@@ -1,9 +1,14 @@
+Cancel ctrl+alt+del before login
+  windows + R gpedit.msc -> Computer Configuration -> Window Settings -> Security Settings -> Local Policies -> Security Options 
+    Interactive logon: Do not require CTRL+ALT+DEL Enabled
+
 
 Install Oracle Database
   Download zip at https://www.oracle.com/tw/database/technologies/oracle-database-software-downloads.html
   unzip WINDOWS.X64_193000_db_home.zip
 
-  click setup
+  Right click setup.exe run as Administrator
+  
   
 Create user
   On cmd
@@ -13,9 +18,11 @@ Create user
   grant sysdba to c##username container=all;
   grant create session to c##username;
 
+
 Check Database Parameter
   search -> regedit ->  Computer -> HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_OraDB19Home1
-  
+
+
 Configue Parameter
   Oracle home\network\admin\listener.ora
     LISTENER -> DESCRIPTION_LIST -> DESCRIPTION -> ADDRESS   Modify HOST from localhost to hostname
