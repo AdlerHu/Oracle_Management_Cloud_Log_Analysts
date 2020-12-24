@@ -1,5 +1,9 @@
 Monitoring oracle database with oracle management cloud
 
+  Depoly Oracle Database on Linux host and Windows server host. 
+  And then monitor those databases using Oracle Management Cloud Agent.
+  
+  
 Workflow of Log Analyst with Oracle Management Cloud 
   
   0. Create an Oracle Cloud Account or user that can get into oracle management cloud
