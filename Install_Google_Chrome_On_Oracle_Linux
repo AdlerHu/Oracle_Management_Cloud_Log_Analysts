@@ -1,0 +1,9 @@
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+sudo yum -y localinstall google-chrome-stable_current_x86_64.rpm
+
+if "Another app is currently holding the yum lock; waiting for it to exit"
+  sudo rm -f /var/run/yum.pid
+  
+if "Requires: libvulkan.so.1()(64bit)"
+  sudo yum-config-manager --enable ol7_optional_latest
+  
