@@ -26,17 +26,21 @@ Install Oracle Database 19c
       # User specific environment and startup programs
       export ORACLE_BASE=/opt/oracle
       export ORACLE_HOME=/opt/oracle/product/19c/dbhome_1
-
+      export ORACLE_SID=ORCLCDB
+      
       PATH=$PATH:$HOME/.local/bin:$HOME/bin:$ORACLE_HOME/bin
       export PATH
+      
   . oraenv
     ORCLCDB
+
 
 Check Listener state
   lsnrctl status
   
   if no Listener
     lsnrctl start
+
 
 Get into Oracle Database
   sqlplus / as sysdba
@@ -47,6 +51,19 @@ Get into Oracle Database
     create user c##user_name identified by password;
     grant sysdba to c##user_name container=all;
     grant create session to c##user_name;
+    
+    
+Auto-start database on reboot    
+    vi /etc/oratab
+      $ORACLE_SID:$ORACLE_HOME:Y
+    
+    sudo vi /etc/rc.local
+      # auto-start database listener
+      su - 'oracle' -c 'lsnrctl start'
+
+      # auto-start database
+      su - 'oracle' -c 'dbstart'
+    
     
 Login Oracle Database by user
   su oracle
